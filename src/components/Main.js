@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux';
 import ButtonBlue from './Buttons/ButtonBlue';
 import ButtonClose from './Buttons/ButtonClose';
 import styles from './Main.module.css';
@@ -5,8 +6,11 @@ import Rapport from './Rapport';
 import Roll from './Roll';
 import Room from './Room';
 import Windows from './Windows';
+import { toggleShowDescription } from '../redux/slices/showDescriptionSlice';
 
 function Main() {
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.main}>
       <Room />
@@ -19,7 +23,11 @@ function Main() {
       <div className={styles.dashed}></div>
       <ButtonBlue>Рассчитать материалы</ButtonBlue>
 
-      <ButtonClose />
+      <ButtonClose
+        onClick={() => {
+          dispatch(toggleShowDescription());
+        }}
+      />
     </div>
   );
 }

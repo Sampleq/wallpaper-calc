@@ -27,19 +27,6 @@
   margin-bottom: 4.8rem;
 }
 
-.main button {
-  display: block;
-  margin: 0 auto;
-  padding: 1.6rem 3.2rem;
-  border-radius: 1.2rem;
-
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-
-  color: white;
-  background-color: #526eff;
-}
-
 @media (max-width: 1023px) {
   .radio_wrapper {
     flex-direction: column;

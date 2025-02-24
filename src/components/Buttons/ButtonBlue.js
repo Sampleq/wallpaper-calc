@@ -1,7 +1,7 @@
 import styles from './ButtonBlue.module.css';
 
 function ButtonBlue(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
     // передаём все свойства (props) компонента Button "как есть" в другой компонент

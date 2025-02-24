@@ -1,7 +1,15 @@
 import styles from './ButtonClose.module.css';
 
-function ButtonClose() {
-  return <button className={styles.close}>x</button>;
+function ButtonClose(props) {
+  return (
+    <button
+      // передаём все свойства (props) компонента ButtonClose "как есть" в button
+      {...props}
+      className={styles.close}
+    >
+      X
+    </button>
+  );
 }
 
 export default ButtonClose;

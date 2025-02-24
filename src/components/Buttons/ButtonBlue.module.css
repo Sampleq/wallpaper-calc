@@ -9,4 +9,10 @@
 
   color: white;
   background-color: #526eff;
+
+  transition: 0.2s;
+}
+
+.btn_blue:hover {
+  background-color: hsl(230, 100%, 56%);
 }

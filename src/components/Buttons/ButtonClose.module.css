@@ -1,8 +1,15 @@
 .close {
   position: absolute;
-  padding: 0 !important;
-  background-color: transparent !important;
-  color: #526eff !important;
+  padding: 0;
+  background-color: transparent;
+  color: #526eff;
   right: 2rem;
   top: 2rem;
+
+  transition: 0.2s;
+}
+
+.close:hover {
+  transform: scale(1.2);
+  color: red;
 }

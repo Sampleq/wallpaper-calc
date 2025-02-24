@@ -23,23 +23,6 @@
   margin-bottom: 4.8rem;
 }
 
-.description button {
-  display: block;
-  margin: 0 auto;
-  padding: 1.6rem 3.2rem;
-  border-radius: 1.2rem;
-
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-
-  color: white;
-  background-color: #526eff;
-}
-
-.description button:hover {
-  background-color: hsl(230, 100%, 56%);
-}
-
 @media (max-width: 1023px) {
   .description {
     width: 37.6rem;

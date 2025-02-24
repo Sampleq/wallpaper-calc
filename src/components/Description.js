@@ -1,7 +1,11 @@
+import { useDispatch } from 'react-redux';
 import ButtonBlue from './Buttons/ButtonBlue';
 import styles from './Description.module.css';
+import { toggleShowDescription } from '../redux/slices/showDescriptionSlice';
 
 function Description() {
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.description}>
       <h1>Калькулятор обоев</h1>
@@ -16,7 +20,7 @@ function Description() {
 
       <ButtonBlue
         onClick={() => {
-          console.log('onClick btn in Description ');
+          dispatch(toggleShowDescription());
         }}
       >
         Начать расчет материалов
