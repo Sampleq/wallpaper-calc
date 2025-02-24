@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ButtonBlue from './Buttons/ButtonBlue';
 import ButtonClose from './Buttons/ButtonClose';
 import styles from './Main.module.css';
@@ -7,9 +7,12 @@ import Roll from './Roll';
 import Room from './Room';
 import Windows from './Windows';
 import { toggleShowDescription } from '../redux/slices/showDescriptionSlice';
+import Results from './Results';
+import { calculateResults, selectResults } from '../redux/slices/resultsSlice';
 
 function Main() {
   const dispatch = useDispatch();
+  const results = useSelector(selectResults);
 
   return (
     <div className={styles.main}>
@@ -21,7 +24,14 @@ function Main() {
       <Windows />
 
       <div className={styles.dashed}></div>
-      <ButtonBlue>Рассчитать материалы</ButtonBlue>
+
+      {results ? (
+        <Results />
+      ) : (
+        <ButtonBlue onClick={() => dispatch(calculateResults())}>
+          Рассчитать материалы
+        </ButtonBlue>
+      )}
 
       <ButtonClose
         onClick={() => {

@@ -1,0 +1,37 @@
+.results {
+  padding: 4.2rem 5.2rem;
+  background-color: #526eff;
+  border-radius: 1.8rem;
+}
+
+.results h2 {
+  color: white;
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.results_data {
+  display: flex;
+
+  margin-bottom: 3.5rem;
+}
+.results_buttons {
+  display: flex;
+
+  column-gap: 1.6rem;
+  row-gap: 0.8rem;
+}
+
+.results_buttons button {
+  background-color: white;
+  padding: 1.5rem 3.2rem;
+  border-radius: 1.2rem;
+
+  color: #526eff;
+}
+
+.results_buttons button:hover {
+  background-color: hsl(230, 100%, 98%);
+}
