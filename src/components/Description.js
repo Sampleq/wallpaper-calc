@@ -1,3 +1,4 @@
+import ButtonBlue from './Buttons/ButtonBlue';
 import styles from './Description.module.css';
 
 function Description() {
@@ -13,13 +14,13 @@ function Description() {
         материалы и клей.
       </p>
 
-      <button
+      <ButtonBlue
         onClick={() => {
           console.log('onClick btn in Description ');
         }}
       >
         Начать расчет материалов
-      </button>
+      </ButtonBlue>
     </div>
   );
 }

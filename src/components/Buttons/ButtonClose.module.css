@@ -1,0 +1,8 @@
+.close {
+  position: absolute;
+  padding: 0 !important;
+  background-color: transparent !important;
+  color: #526eff !important;
+  right: 2rem;
+  top: 2rem;
+}
