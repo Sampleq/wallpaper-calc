@@ -1,18 +1,35 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './Results.module.css';
-import { resetResults } from '../redux/slices/resultsSlice';
+import { resetResults, selectResults } from '../redux/slices/resultsSlice';
 import { resetUserOptions } from '../redux/slices/userOptionsSlice';
 
 function Results() {
   const dispatch = useDispatch();
 
+  const results = useSelector(selectResults);
+  const { rollsNumber, wallpaperSquare, coveredArea } = results;
+
   return (
     <div className={styles.results}>
       <h2>Результаты</h2>
 
-      <div className={styles.results_data}>results_data</div>
+      <div className={styles.results_data}>
+        <div>
+          <p>{rollsNumber}</p>
+          <span>Кол-во рулонов</span>
+        </div>
+        <div>
+          <p>{wallpaperSquare.toFixed(2)} м2</p>
+          <span>Кол-во m2 обоев</span>
+        </div>
+        <div>
+          <p>{coveredArea.toFixed()} м2</p>
+          <span>Площадь оклейки</span>
+        </div>
+      </div>
 
       <div className={styles.results_buttons}>
+        {/* Добавить кнопку Рассчитать заново - её нет в макете - но с ней удобнее  */}
         <button
           onClick={() => {
             dispatch(resetUserOptions());

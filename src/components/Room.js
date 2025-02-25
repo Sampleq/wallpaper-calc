@@ -15,15 +15,15 @@ function Room() {
 
   function handleInputLengthChange(e) {
     if (!isFinite(e.target.value)) return; // simple input type check
-    dispatch(setRoomLength(e.target.value));
+    dispatch(setRoomLength(e.target.value.replace(/^0+(?=\d)/, ''))); // remove leading zeros (exept one in fractional numbers)
   }
   function handleInputWidthChange(e) {
     if (!isFinite(e.target.value)) return; // simple input type check
-    dispatch(setRoomWidth(e.target.value));
+    dispatch(setRoomWidth(e.target.value.replace(/^0+(?=\d)/, '')));
   }
   function handleInputHeightChange(e) {
     if (!isFinite(e.target.value)) return; // simple input type check
-    dispatch(setRoomHeight(e.target.value));
+    dispatch(setRoomHeight(e.target.value.replace(/^0+(?=\d)/, '')));
   }
 
   return (

@@ -10,9 +10,17 @@ import { toggleShowDescription } from '../redux/slices/showDescriptionSlice';
 import Results from './Results';
 import { calculateResults, selectResults } from '../redux/slices/resultsSlice';
 
+// Получаем serOptions из userOptionsSlice и формируем action для action-creator-а calculateResults - рассчитываем площадь стен, кол-во рулонов и т.д.
+function thunkFunction(dispatch, getState) {
+  const { userOptions } = getState(); // читаем состояние
+  //   console.log('userOptions',userOptions);
+  dispatch(calculateResults(userOptions));
+}
+
 function Main() {
   const dispatch = useDispatch();
   const results = useSelector(selectResults);
+  console.log('results', results);
 
   return (
     <div className={styles.main}>
@@ -28,7 +36,12 @@ function Main() {
       {results ? (
         <Results />
       ) : (
-        <ButtonBlue onClick={() => dispatch(calculateResults())}>
+        <ButtonBlue
+          onClick={() => {
+            dispatch(thunkFunction);
+            // dispatch(calculateResults());
+          }}
+        >
           Рассчитать материалы
         </ButtonBlue>
       )}

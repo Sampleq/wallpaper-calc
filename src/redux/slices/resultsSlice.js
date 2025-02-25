@@ -14,11 +14,29 @@ const resultsSlice = createSlice({
   reducers: {
     calculateResults: function (state, action) {
       // make calculation with userOptions
+      const userOptions = action.payload;
+
+      const {
+        length: roomLength,
+        width: roomWidth,
+        height: roomHeight,
+      } = userOptions.room;
+      //   console.log(roomLength, roomWidth, roomHeight);
+
+      const rapport = userOptions.rapport;
+
+      const wallsSquare =
+        (+roomLength * +roomHeight + +roomWidth * +roomHeight) * 2;
+      //   console.log('wallsSquare', wallsSquare);
+      const rollSquare = +userOptions.rollSquare - (rapport * 1.06) / 2; // примерно учитываем раппорт (1.06 - ширина рулона)
+      console.log('rollSquare', rollSquare);
+
+      const rollsNumber = Math.ceil(wallsSquare / rollSquare);
 
       return {
-        rollsNumber: 10,
-        wallpaperSquare: 100,
-        area: 200,
+        rollsNumber,
+        wallpaperSquare: rollsNumber * rollSquare,
+        coveredArea: wallsSquare,
       };
     },
 

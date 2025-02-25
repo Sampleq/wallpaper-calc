@@ -14,9 +14,24 @@
 
 .results_data {
   display: flex;
+  column-gap: 5.4rem;
+  row-gap: 2.2rem;
 
   margin-bottom: 3.5rem;
 }
+
+.results_data p {
+  color: white;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.results_data span {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
 .results_buttons {
   display: flex;
 
