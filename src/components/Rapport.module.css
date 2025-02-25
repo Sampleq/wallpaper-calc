@@ -1,2 +1,29 @@
 .rapport {
+  flex-grow: 1;
+}
+
+.rapport h2 {
+  margin-bottom: 2.4rem;
+}
+
+.rapport form {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.rapport label {
+  padding: 1.6rem 3.2rem;
+  background-color: #526eff33;
+  color: white;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.rapport input[type='radio'] {
+  display: none;
+}
+
+/* или можно использовать псевдокласс :has() */
+.rapport input[type='radio']:checked + label {
+  background-color: #526eff;
 }

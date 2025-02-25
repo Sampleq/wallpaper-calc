@@ -1,3 +1,26 @@
 .room {
   margin-bottom: 4.2rem;
 }
+
+.room h2 {
+  margin-bottom: 2.4rem;
+}
+
+.room form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.room label {
+  flex-grow: 1;
+}
+.room input {
+  display: block;
+  margin-top: 0.8rem;
+  width: 100%;
+
+  padding: 1.6rem;
+  border: 0.1rem solid #11111152;
+  border-radius: 0.8rem;
+}

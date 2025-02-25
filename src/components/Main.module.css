@@ -2,6 +2,8 @@
   position: relative;
   background-color: white;
   padding: 5.8rem 8rem;
+
+  width: 99rem;
 }
 
 .main h2 {
@@ -12,7 +14,7 @@
 .radio_wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   column-gap: 6.4rem;
 

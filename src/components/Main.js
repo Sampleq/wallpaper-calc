@@ -36,6 +36,7 @@ function Main() {
       <ButtonClose
         onClick={() => {
           dispatch(toggleShowDescription());
+          // также можно дополнительно сбрасывать results и userOptions
         }}
       />
     </div>
