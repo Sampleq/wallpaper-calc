@@ -21,7 +21,7 @@ const initialState = {
   doors: [
     // example
     {
-      heigth: 0,
+      height: 0,
       width: 0,
     },
   ],
@@ -63,6 +63,7 @@ const userOptionsSlice = createSlice({
         window => window.id !== action.payload
       );
     },
+    // при желании можно отрефакторить - объеденить в setWindow
     setWindowHeight: function (state, action) {
       state.windows = state.windows.map(window => {
         if (window.id === action.payload.id) {

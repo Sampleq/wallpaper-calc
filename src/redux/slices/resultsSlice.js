@@ -25,8 +25,17 @@ const resultsSlice = createSlice({
 
       const rapport = userOptions.rapport;
 
+      const windows = userOptions.windows;
+
+      // calculate results:
+      const windowsSquare = windows.reduce((acc, window) => {
+        return (acc += window.height * window.width);
+      }, 0);
+      // console.log('windowsSquare', windowsSquare);
+
       const wallsSquare =
-        (+roomLength * +roomHeight + +roomWidth * +roomHeight) * 2;
+        (+roomLength * +roomHeight + +roomWidth * +roomHeight) * 2 -
+        windowsSquare;
       //   console.log('wallsSquare', wallsSquare);
       const rollSquare = +userOptions.rollSquare - (rapport * 1.06) / 2; // примерно учитываем раппорт (1.06 - ширина рулона)
       console.log('rollSquare', rollSquare);
