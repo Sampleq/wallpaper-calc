@@ -13,7 +13,7 @@ import { calculateResults, selectResults } from '../redux/slices/resultsSlice';
 import styles from './Main.module.css';
 
 // Получаем serOptions из userOptionsSlice и формируем action для action-creator-а calculateResults - рассчитываем площадь стен, кол-во рулонов и т.д.
-function thunkFunction(dispatch, getState) {
+export function thunkFunction(dispatch, getState) {
   const { userOptions } = getState(); // читаем состояние
   //   console.log('userOptions',userOptions);
   dispatch(calculateResults(userOptions));

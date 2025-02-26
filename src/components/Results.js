@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './Results.module.css';
 import { resetResults, selectResults } from '../redux/slices/resultsSlice';
 import { resetUserOptions } from '../redux/slices/userOptionsSlice';
+import { thunkFunction } from './Main';
 
 function Results() {
   const dispatch = useDispatch();
@@ -30,6 +31,14 @@ function Results() {
 
       <div className={styles.results_buttons}>
         {/* Добавить кнопку Рассчитать заново - её нет в макете - но с ней удобнее  */}
+        <button
+          onClick={() => {
+            dispatch(thunkFunction);
+          }}
+        >
+          Пересчитать
+        </button>
+
         <button
           onClick={() => {
             dispatch(resetUserOptions());
