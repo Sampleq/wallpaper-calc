@@ -12,11 +12,11 @@ const initialState = {
   rapport: 0,
 
   windows: [
-    // example
-    {
-      heigth: 0,
-      width: 0,
-    },
+    // // example
+    // {
+    //   heigth: 0,
+    //   width: 0,
+    // },
   ],
   doors: [
     // example
@@ -53,6 +53,16 @@ const userOptionsSlice = createSlice({
     setRapportOptions: function (state, action) {
       state.rapport = action.payload;
     },
+
+    addWindow: function (state, action) {
+      state.windows.push(action.payload);
+      // возможно благодаря immer
+    },
+    deleteWindow: function (state, action) {
+      state.windows = state.windows.filter(
+        window => window.id !== action.payload
+      );
+    },
   },
 });
 
@@ -63,6 +73,8 @@ export const {
   setRoomHeight,
   setRollSquareOptions,
   setRapportOptions,
+  addWindow,
+  deleteWindow,
 } = userOptionsSlice.actions;
 
 // callbacks for useSelector()
@@ -74,6 +86,9 @@ export function selectRollSquareOptions(state) {
 }
 export function selectRapportOptions(state) {
   return state.userOptions.rapport;
+}
+export function selectWindowsOptions(state) {
+  return state.userOptions.windows;
 }
 
 export default userOptionsSlice.reducer;

@@ -1,0 +1,12 @@
+.window {
+  position: relative;
+
+  width: 26.6rem;
+  height: 18rem;
+
+  border: dashed 0.1rem #526eff;
+  border-radius: 0.8rem;
+
+  font-size: 2rem;
+  line-height: 2.8rem;
+}

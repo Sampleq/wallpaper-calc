@@ -20,7 +20,7 @@ function thunkFunction(dispatch, getState) {
 function Main() {
   const dispatch = useDispatch();
   const results = useSelector(selectResults);
-  console.log('results', results);
+  //   console.log('results', results);
 
   return (
     <div className={styles.main}>
@@ -39,7 +39,7 @@ function Main() {
         <ButtonBlue
           onClick={() => {
             dispatch(thunkFunction);
-            // dispatch(calculateResults());
+            // dispatch(calculateResults()); - moved inside thunkFunction
           }}
         >
           Рассчитать материалы

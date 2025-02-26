@@ -1,0 +1,32 @@
+.windows {
+  margin-bottom: 4.2rem;
+}
+.windows h2 {
+  margin-bottom: 2.4rem;
+}
+
+.windows_items {
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 1.6rem;
+  row-gap: 2.4rem;
+}
+
+.windows_button {
+  width: 26.6rem;
+  height: 18rem;
+
+  border: dashed 0.1rem #526eff;
+  border-radius: 0.8rem;
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #111111cc;
+
+  transition: 0.2s;
+}
+
+.windows_button:hover {
+  background-color: rgba(82, 111, 255, 0.1);
+}
