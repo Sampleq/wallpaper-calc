@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   room: {
-    length: 0,
-    width: 0,
-    height: 0,
+    length: '',
+    width: '',
+    height: '',
   },
 
   rollSquare: 1.06 * 10,

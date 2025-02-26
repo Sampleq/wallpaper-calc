@@ -25,8 +25,8 @@ function Doors() {
           onClick={() => {
             dispatch(
               addDoor({
-                height: 0,
-                width: 0,
+                height: '',
+                width: '',
                 id: uuidv4(),
               })
             );
