@@ -16,7 +16,7 @@ function Window({ windowData }) {
   //   console.log('window', window);
 
   function handleInputHeightChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(
       setWindowHeight({
         id: window.id,
@@ -26,7 +26,7 @@ function Window({ windowData }) {
   }
 
   function handleInputWidthtChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(
       setWindowWidth({
         id: window.id,
@@ -43,7 +43,7 @@ function Window({ windowData }) {
         <label htmlFor='window_height'>
           Высота м
           <input
-            type='text'
+            type='number'
             name=''
             id='window_height'
             placeholder='0'
@@ -54,7 +54,7 @@ function Window({ windowData }) {
         <label htmlFor='window_width'>
           Ширина м
           <input
-            type='text'
+            type='number'
             name=''
             id='window_width'
             placeholder='0'

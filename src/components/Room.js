@@ -14,15 +14,15 @@ function Room() {
   //   console.log('roomOptions', roomOptions);
 
   function handleInputLengthChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(setRoomLength(e.target.value.replace(/^0+(?=\d)/, ''))); // remove leading zeros (exept one in fractional numbers)
   }
   function handleInputWidthChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(setRoomWidth(e.target.value.replace(/^0+(?=\d)/, '')));
   }
   function handleInputHeightChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(setRoomHeight(e.target.value.replace(/^0+(?=\d)/, '')));
   }
 
@@ -33,7 +33,7 @@ function Room() {
         <label htmlFor='room_length'>
           Длина м
           <input
-            type='text'
+            type='number'
             name=''
             id='room_length'
             placeholder='0'
@@ -45,7 +45,7 @@ function Room() {
         <label htmlFor='room_width'>
           Ширина м
           <input
-            type='text'
+            type='number'
             name=''
             id='room_width'
             placeholder='0'
@@ -57,7 +57,7 @@ function Room() {
         <label htmlFor='room_height'>
           Высота м
           <input
-            type='text'
+            type='number'
             name=''
             id='room_height'
             placeholder='0'

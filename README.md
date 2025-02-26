@@ -1,4 +1,4 @@
-# Wallpaprer Calculator
+# Wallpaper Calculator
 
 App using React and Redux
 

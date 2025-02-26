@@ -17,7 +17,7 @@ function Door({ doorData }) {
   //   console.log('door', door);
 
   function handleInputHeightChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(
       setDoorHeight({
         id: door.id,
@@ -27,7 +27,7 @@ function Door({ doorData }) {
   }
 
   function handleInputWidthtChange(e) {
-    if (!isFinite(e.target.value)) return; // simple input type check
+    if (e.target.value < 0) return; // simple input check
     dispatch(
       setDoorWidth({
         id: door.id,
@@ -44,7 +44,7 @@ function Door({ doorData }) {
         <label htmlFor='door_height'>
           Высота м
           <input
-            type='text'
+            type='number'
             name=''
             id='door_height'
             placeholder='0'
@@ -55,7 +55,7 @@ function Door({ doorData }) {
         <label htmlFor='door_width'>
           Ширина м
           <input
-            type='text'
+            type='number'
             name=''
             id='door_width'
             placeholder='0'
