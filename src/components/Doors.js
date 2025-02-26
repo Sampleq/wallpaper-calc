@@ -1,3 +1,4 @@
+import { PiDoorOpenDuotone } from 'react-icons/pi';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './Doors.module.css';
@@ -31,6 +32,8 @@ function Doors() {
             );
           }}
         >
+          <PiDoorOpenDuotone style={{ fontSize: '2.4rem' }} />
+          <br />
           Добавить дверь
         </button>
       </div>

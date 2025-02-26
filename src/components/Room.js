@@ -36,7 +36,8 @@ function Room() {
             type='text'
             name=''
             id='room_length'
-            placeholder='14.2'
+            placeholder='0'
+            // placeholder='14.2'
             value={roomOptions.length}
             onChange={handleInputLengthChange}
           />
@@ -47,7 +48,8 @@ function Room() {
             type='text'
             name=''
             id='room_width'
-            placeholder='28.5'
+            placeholder='0'
+            // placeholder='28.5'
             value={roomOptions.width}
             onChange={handleInputWidthChange}
           />
@@ -58,7 +60,8 @@ function Room() {
             type='text'
             name=''
             id='room_height'
-            placeholder='18.5'
+            placeholder='0'
+            // placeholder='18.5'
             value={roomOptions.height}
             onChange={handleInputHeightChange}
           />

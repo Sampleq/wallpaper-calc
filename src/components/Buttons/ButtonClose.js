@@ -1,3 +1,4 @@
+import { IoIosClose } from 'react-icons/io';
 import styles from './ButtonClose.module.css';
 
 function ButtonClose(props) {
@@ -7,7 +8,7 @@ function ButtonClose(props) {
       {...props}
       className={styles.close}
     >
-      X
+      <IoIosClose style={{ fontSize: '3.2rem' }} />
     </button>
   );
 }

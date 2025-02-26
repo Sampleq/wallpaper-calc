@@ -1,3 +1,4 @@
+import { MdOutlineWindow } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './Windows.module.css';
@@ -34,6 +35,8 @@ function Windows() {
             );
           }}
         >
+          <MdOutlineWindow style={{ fontSize: '2.4rem' }} />
+          <br />
           Добавить окно
         </button>
       </div>

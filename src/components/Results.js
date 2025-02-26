@@ -45,6 +45,8 @@ function Results() {
           // // const navigate = useNavigate();
           onClick={() => {
             //   navigate('/catalog', { replace: false })
+            alert(`   // must use react-router-dom
+    navigate('/catalog', { replace: false })`);
             console.log(`navigate('/catalog', { replace: false })`);
           }}
         >
