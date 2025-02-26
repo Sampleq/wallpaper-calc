@@ -19,12 +19,7 @@ function Windows() {
 
       <div className={styles.windows_items}>
         {windows.map(window => (
-          <Window
-            key={window.id}
-            handleDeleteWindow={() => {
-              dispatch(deleteWindow(window.id));
-            }}
-          />
+          <Window key={window.id} windowData={window} />
         ))}
 
         {/* можно вынести отдельным компонентом */}
@@ -33,7 +28,7 @@ function Windows() {
           onClick={() => {
             dispatch(
               addWindow({
-                heigth: 0,
+                height: 0,
                 width: 0,
                 id: uuidv4(),
               })

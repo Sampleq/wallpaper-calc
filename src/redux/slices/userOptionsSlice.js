@@ -14,8 +14,8 @@ const initialState = {
   windows: [
     // // example
     // {
-    //   heigth: 0,
-    //   width: 0,
+    //   height: 10,
+    //   width: 20,
     // },
   ],
   doors: [
@@ -63,6 +63,22 @@ const userOptionsSlice = createSlice({
         window => window.id !== action.payload
       );
     },
+    setWindowHeight: function (state, action) {
+      state.windows = state.windows.map(window => {
+        if (window.id === action.payload.id) {
+          window.height = action.payload.height;
+        }
+        return window;
+      });
+    },
+    setWindowWidth: function (state, action) {
+      state.windows = state.windows.map(window => {
+        if (window.id === action.payload.id) {
+          window.width = action.payload.width;
+        }
+        return window;
+      });
+    },
   },
 });
 
@@ -75,6 +91,8 @@ export const {
   setRapportOptions,
   addWindow,
   deleteWindow,
+  setWindowHeight,
+  setWindowWidth,
 } = userOptionsSlice.actions;
 
 // callbacks for useSelector()
