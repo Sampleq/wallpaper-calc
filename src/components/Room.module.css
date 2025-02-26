@@ -24,3 +24,9 @@
   border: 0.1rem solid #11111152;
   border-radius: 0.8rem;
 }
+
+@media (max-width: 1023px) {
+  .room form {
+    flex-direction: column;
+  }
+}

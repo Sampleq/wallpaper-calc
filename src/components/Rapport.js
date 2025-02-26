@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import style from './Rapport.module.css';
+import styles from './Rapport.module.css';
 import {
   selectRapportOptions,
   setRapportOptions,
@@ -10,7 +10,7 @@ function Rapport() {
   const rapport = useSelector(selectRapportOptions);
 
   return (
-    <div className={style.rapport}>
+    <div className={styles.rapport}>
       <h2>Раппорт</h2>
 
       <form>
@@ -39,7 +39,9 @@ function Rapport() {
             dispatch(setRapportOptions(e.target.value));
           }}
         />
-        <label htmlFor='rapport_2'>0.32м</label>
+        <label htmlFor='rapport_2' className={styles.rapport_32}>
+          0.32м
+        </label>
 
         <input
           value={0.64}
@@ -52,7 +54,9 @@ function Rapport() {
             dispatch(setRapportOptions(e.target.value));
           }}
         />
-        <label htmlFor='rapport_3'>0.64м </label>
+        <label htmlFor='rapport_3' className={styles.rapport_64}>
+          0.64м{' '}
+        </label>
       </form>
     </div>
   );

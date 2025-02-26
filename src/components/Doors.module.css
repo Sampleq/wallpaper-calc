@@ -30,3 +30,14 @@
 .doors_button:hover {
   background-color: rgba(82, 111, 255, 0.1);
 }
+
+@media (max-width: 1023px) {
+  .doors_items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doors_button {
+    width: 32rem;
+  }
+}

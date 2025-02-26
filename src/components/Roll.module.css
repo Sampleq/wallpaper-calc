@@ -27,3 +27,9 @@
 .roll input[type='radio']:checked + label {
   background-color: #526eff;
 }
+
+@media (max-width: 1023px) {
+  .roll label {
+    padding: 1rem 2rem;
+  }
+}

@@ -8,6 +8,7 @@
 
 .rapport form {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.6rem;
 }
 
@@ -19,6 +20,13 @@
   cursor: pointer;
 }
 
+.rapport label.rapport_32 {
+  padding: 1.6rem 4.9rem;
+}
+.rapport label.rapport_64 {
+  padding: 1.6rem 6.8rem;
+}
+
 .rapport input[type='radio'] {
   display: none;
 }
@@ -26,4 +34,16 @@
 /* или можно использовать псевдокласс :has() */
 .rapport input[type='radio']:checked + label {
   background-color: #526eff;
+}
+
+@media (max-width: 1023px) {
+  .rapport label {
+    padding: 1rem 2rem;
+  }
+  .rapport label.rapport_32 {
+    padding: 1rem 3.7rem;
+  }
+  .rapport label.rapport_64 {
+    padding: 1rem 5.2rem;
+  }
 }

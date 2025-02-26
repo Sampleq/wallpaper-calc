@@ -2,6 +2,7 @@
   /* width: 79.6rem; */
   width: 78.8rem;
   background-color: white;
+  border-radius: 1.8rem;
   margin: auto;
 
   padding: 5.8rem 8rem;
@@ -25,7 +26,7 @@
 
 @media (max-width: 1023px) {
   .description {
-    width: 37.6rem;
+    width: 37.5rem;
     padding: 2.8rem;
   }
 
