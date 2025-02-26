@@ -1,14 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import ButtonBlue from './Buttons/ButtonBlue';
 import ButtonClose from './Buttons/ButtonClose';
-import styles from './Main.module.css';
 import Rapport from './Rapport';
 import Roll from './Roll';
 import Room from './Room';
 import Windows from './Windows';
-import { toggleShowDescription } from '../redux/slices/showDescriptionSlice';
+import Doors from './Doors';
 import Results from './Results';
+import { toggleShowDescription } from '../redux/slices/showDescriptionSlice';
 import { calculateResults, selectResults } from '../redux/slices/resultsSlice';
+
+import styles from './Main.module.css';
 
 // Получаем serOptions из userOptionsSlice и формируем action для action-creator-а calculateResults - рассчитываем площадь стен, кол-во рулонов и т.д.
 function thunkFunction(dispatch, getState) {
@@ -30,6 +32,7 @@ function Main() {
         <Rapport />
       </div>
       <Windows />
+      <Doors />
 
       <div className={styles.dashed}></div>
 

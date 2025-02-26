@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from './Windows.module.css';
 import {
   addWindow,
-  deleteWindow,
   selectWindowsOptions,
 } from '../redux/slices/userOptionsSlice';
 import Window from './Window';

@@ -19,11 +19,11 @@ const initialState = {
     // },
   ],
   doors: [
-    // example
-    {
-      height: 0,
-      width: 0,
-    },
+    // // example
+    // {
+    //   height: 30,
+    //   width: 50,
+    // },
   ],
 };
 
@@ -80,6 +80,31 @@ const userOptionsSlice = createSlice({
         return window;
       });
     },
+
+    addDoor: function (state, action) {
+      state.doors.push(action.payload);
+      // возможно благодаря immer
+    },
+    deleteDoor: function (state, action) {
+      state.doors = state.doors.filter(door => door.id !== action.payload);
+    },
+    // при желании можно отрефакторить - объеденить в setDoor
+    setDoorHeight: function (state, action) {
+      state.doors = state.doors.map(door => {
+        if (door.id === action.payload.id) {
+          door.height = action.payload.height;
+        }
+        return door;
+      });
+    },
+    setDoorWidth: function (state, action) {
+      state.doors = state.doors.map(door => {
+        if (door.id === action.payload.id) {
+          door.width = action.payload.width;
+        }
+        return door;
+      });
+    },
   },
 });
 
@@ -94,6 +119,10 @@ export const {
   deleteWindow,
   setWindowHeight,
   setWindowWidth,
+  addDoor,
+  deleteDoor,
+  setDoorHeight,
+  setDoorWidth,
 } = userOptionsSlice.actions;
 
 // callbacks for useSelector()
@@ -108,6 +137,9 @@ export function selectRapportOptions(state) {
 }
 export function selectWindowsOptions(state) {
   return state.userOptions.windows;
+}
+export function selectDoorsOptions(state) {
+  return state.userOptions.doors;
 }
 
 export default userOptionsSlice.reducer;
